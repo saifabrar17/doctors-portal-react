@@ -10,7 +10,9 @@ import Footer from './Pages/Home/Footer';
 import Appoinment from './Pages/Appoinment/Appoinment';
 import SignUp from './Pages/User/Signup/Signup';
 import RequireAuth from './Pages/User/RequireAuth/RequireAuth';
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div>
@@ -28,6 +30,7 @@ function App() {
         <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
