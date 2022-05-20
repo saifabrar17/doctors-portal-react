@@ -16,6 +16,8 @@ import { ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Pages/Dashboard/Dashboard';
+import Users from './Pages/Dashboard/Users';
+import RequireAdmin from './Pages/User/RequireAdmin';
 function App() {
   return (
     <div>
@@ -34,6 +36,7 @@ function App() {
           <Route index element={<MyAppionment />}></Route>
           <Route path="review" element={<MyReview />}></Route>
           <Route path="history" element={<MyHistory />}></Route>
+          <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
         </Route>
         <Route path='/*' element={<NotFound></NotFound>}></Route>
       </Routes>
